@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") -%>
+<div class="container" >
+
+    <h1>Home 🏠</h1>
+    <p><%=Hcont%></p>
+    <% if(!AllPosts.length){ %>
+    <h2>Create Your First Blog </h2>
+    <a href="/compose"><button class="btn btn-warning">Create</button></a>
+    <% } %>
+    <% for(i=0;i<AllPosts.length;i++){ %>
+        <h3><%= AllPosts[i].title  %></h3>
+        <p><%=  AllPosts[i].body  %>
+           </p>
+            <% }                             %>
+</div>
+<%- include("partials/footer.ejs") -%>
